@@ -1,4 +1,5 @@
 var pool = require('./connection.js')
+var beats = { rock: 'scissors', scissors: 'paper', paper: 'rock' };
 
 module.exports.getAllRooms = async function() {
   try {
