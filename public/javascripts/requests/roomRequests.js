@@ -37,3 +37,19 @@ async function play(roomId, card) {
     }
 }
 
+async function getRooms() {
+    try {
+        const response = await fetch(`/api/rooms`);
+        if (response.status == 200) {
+           var rooms = await response.json();
+           return rooms;
+        } else {
+            // Treat errors like 404 here
+            console.log(response);
+        }
+    } catch (err) {
+        // Treat 500 errors here
+        console.log(err);
+    }
+}
+
