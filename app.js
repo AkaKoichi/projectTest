@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var roomsRouter = require('./routes/roomsRoutes');
 var usersRouter = require('./routes/users');
 var cardsRouter = require('./routes/cardsRoutes');
+var usersRouter = require('./routes/playersRoutes');
+                
 
 var app = express();
 
@@ -22,5 +24,6 @@ app.use('/', indexRouter);
 app.use('/api/rooms', roomsRouter);
 
 app.use('/api/cards',cardsRouter);
+app.use('/api/users', usersRouter);
 
 module.exports = app;
