@@ -32,7 +32,7 @@ module.exports.getLoggedUserInfo = async function (playerId) {
 }
 module.exports.registerPlayer = async function(player) {
   try  {
-    let sql = "Insert into player(ply_name,ply_passwd) values ($1,$2)";
+    let sql = "Insert into player(ply_name, ply_passwd) values ($1, $2)";
     let result = await pool.query(sql,[player.name, player.password]); 
     return { status: 200, result:result }
     } catch (err){
