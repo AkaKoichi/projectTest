@@ -26,7 +26,7 @@ router.get('/profile', auth.checkAuthentication, async function(req, res, next) 
     res.status(result.status).send(result.result);
 });
 
-router.post('/', async function(req,res,next) {
+router.post('/register', async function(req,res,next) {
     let player = req.body;
     console.log("Register user with info: ");
     console.log(player);
